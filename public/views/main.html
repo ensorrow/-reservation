@@ -1,0 +1,91 @@
+<%- include('common_hd.html') %>
+<main class="content-wrapper">
+  <section class="content-header">
+    <h1>
+      课程实验预约
+      <small>由班长或学委预约</small>
+    </h1>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="box box-solid dragList">
+          <div class="box-header with-border">
+            <h4 class="box-title">实验列表 <small>拖动到时间表中</small></h4>
+          </div>
+          <div class="box-body">
+            <div id="external-events">
+            	<div class="header">过程流体机械</div>
+              <div class="external-event bg-light-blue" data-type="0">往复压缩机性能综合测试</div>
+              <div class="external-event bg-light-blue" data-type="0">往复压缩机流量调节实验</div>
+              <div class="external-event bg-light-blue" data-type="0">离心风机性能测试实验</div>
+              <div class="external-event bg-light-blue" data-type="0">离心泵性能测试实验</div>
+              <div class="header">过程设备设计</div>
+              <div class="external-event bg-green" data-type="1">内压薄壁容器应力测定实验</div>
+              <div class="external-event bg-green" data-type="1">内压薄壁容器稳定性实验</div>
+              <div class="external-event bg-green" data-type="1">爆破片爆破压力测定实验</div>
+              <div class="external-event bg-green" data-type="1">厚壁容器爆破实验</div>
+              <div class="header">过程控制技术</div>
+              <div class="external-event bg-red" data-type="2">DCS控制系统演示实验</div>
+            </div>
+          </div>
+        </div>
+        <div class="box box-solid">
+          <div class="box-header with-border">
+            <h4 class="box-title">添加实验 <small>填写表单进行预约</small></h4>
+          </div>
+          <div class="box-body">
+          	<div class="header">选择实验类别</div>
+            <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
+              <ul class="fc-color-picker" id="color-chooser">
+                <li><a class="text-blue" href="#" data-type="0"><i class="fa fa-square"></i></a>过程流体机械</li>
+                <li><a class="text-green" href="#" data-type="1"><i class="fa fa-square"></i></a>过程设备设计</li>
+                <li><a class="text-red" href="#" data-type="2"><i class="fa fa-square"></i></a>过程控制技术</li>
+              </ul>
+            </div>
+            <div class="header">详细信息</div>
+            <div>
+          		<div class="form-group">
+          			<label>起始时间</label>
+            		<input type="datetime-local" id="startTime" class="form-control">
+          		</div>
+          		<div class="form-group">
+          			<label>终止时间(可不填)</label>
+            		<input type="datetime-local" id="endTime" class="form-control">
+          		</div>
+            	<div class="form-group">
+            		<label>实验名称</label>
+              	<input id="new-event" type="text" class="form-control">
+            	</div>
+							<button id="add-new-event" type="button" class="btn btn-primary btn-flat pull-right">确认预约</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="box box-primary">
+          <div class="box-body no-padding">
+            <div id="calendar"></div>
+          </div>
+          <div class="box-footer">
+          	<button class="btn btn-flat btn-primary pull-right btn-flat" id="add-all-event">提交</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="center-block">
+        西安交通大学化工学院
+      </div>
+    </div>
+    <div class="row">
+      <ul class="center-block">
+        <li>制作：</li>
+        <li><a href="http://lvzheyang.top">吕哲扬</a></li>
+      </ul>
+    </div>
+	</footer>
+</main>
+<%- include('common_ft.html') %>
